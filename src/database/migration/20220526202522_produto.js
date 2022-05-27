@@ -4,7 +4,7 @@
  */
 exports.up = function (knex) {
   return knex.schema.createTable("produto", function (table) {
-    table.integer("produto_id").primary().notNullable;
+    table.increment("produto_id").primary().notNullable;
     table.string("nome").notNullable;
     table.float("preço").notNullable;
   });
